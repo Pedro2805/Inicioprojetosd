@@ -13,20 +13,20 @@ import retrofit2.http.Path;
 
 public interface ContatoService {
 
-    @GET("/api/9b38d23998ef431090b6991a21134338/contato")
+    @GET("/api/b7bceb64c78b4b55b37ffbe9279e905d/contato")
     Call<List<Contato>> getAllContatos();
 
-    @POST("/api/9b38d23998ef431090b6991a21134338/contato")
+    @POST("/api/b7bceb64c78b4b55b37ffbe9279e905d/contato")
     Call<ResponseBody> salvarContato(
             @Body
                     Contato contato);
 
-    @PUT("/api/9b38d23998ef431090b6991a21134338/contato/{id}")
+    @PUT("/api/b7bceb64c78b4b55b37ffbe9279e905d/{id}")
     Call<ResponseBody> alterarContato(
             @Path("id") String id,
             @Body ContatoPut contatoPut);
 
-    @DELETE("/api/9b38d23998ef431090b6991a21134338/contato/{id}")
+    @DELETE("/api/b7bceb64c78b4b55b37ffbe9279e905d/contato/{id}")
     Call<ResponseBody> deletarContato(
             @Path("id") String id);
 }
